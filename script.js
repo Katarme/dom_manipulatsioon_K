@@ -211,3 +211,25 @@ function createWizard(name, speciality) {
 
 createWizard('Merlin', 'Time Magic') // vastavalt funktsiooni ülesehitusele, esimene sulgudes olev sõna on name (h2) ja teine speciality(p)
 createWizard('Gandalf', 'Fireballs')
+
+let displayElement = document.getElementById('display');
+let incrementButtonElement = document.getElementById('increment');
+let decrementButtonElement = document.getElementById('decrement');
+let resetButtonElement = document.getElementById('reset');
+
+let count = 0;
+
+incrementButtonElement.onclick = function() {
+    count++;
+    displayElement.textContent = count;
+ }
+ 
+ decrementButtonElement.onclick = function() {
+    count--;
+    displayElement.textContent = count;
+ }
+ 
+ resetButtonElement.onclick = function() {
+    count = 0;
+    displayElement.textContent = count;
+ }
