@@ -286,36 +286,58 @@ const data = [
 {
     nimi: "Õun",
     hind: 1.5,
-}
+},
 {
     nimi: "Ananass",
     hind: 2.2,
-}
+},
 {
     nimi: "Banaan",
     hind: 2,
-}
+},
 {
     nimi: "Melon",
     hind: 2,
-}
+},
 {
     nimi: "Virsik",
     hind: 2,
-}
+},
 ];
 
 const tabeligenereerimine = () => {
     //const tabel = document.createElement("table");
-    //const tabeliKeha = document.createElement("tbody")
+    const tabeliKeha = document.querySelector("tbody");
 
     for (let i = 0; i < data.length; i++) {
         //create a table row
         const row = document.createElement("tr");
-        for(let j = 0; j < data[i].length; j++) {
+
+        for(let j = 0; j < 2; j++) {
             //create cells
-            const cell = document.createElement('td')
-            const cellText = 
+            const cell = document.createElement("td");
+            if (j === 0) {
+                cell.append(data[i].nimi);
+            } else {
+                cell.append(data[i].hind);
+            }
+            row.append(cell);
         }
+
+        tabeliKeha.append(row);
     }
 };
+
+tabeligenereerimine();
+
+// order an array of names (sort alphabetically)
+// order an array of objects with name
+//dataNames.sort(function (a, b)) => (a.name < b.name) {
+//    if (a.name < b.name) {
+//        return -1;
+//    }
+//    if (a.name > b.name) {
+//        return 1;
+//    }
+//    return 0;
+//};
