@@ -231,3 +231,29 @@ incrementButtonElement.onclick = function() {
     count = 0;
     displayElement.textContent = count;
  }
+
+ let count2=0
+
+const numberCount = document.getElementById('number2')
+
+ const liitmiseNupp = document.getElementById('liida')
+ const lahutamiseNupp = document.getElementById('lahuta')
+ const tühistamiseNupp = document.getElementById('tühista')
+
+ liitmiseNupp.onclick = () => {
+    count++
+    numberCount.innerHTML = count
+ }
+
+ lahutamiseNupp.onclick = () => {
+    count--
+    numberCount.innerHTML = count
+ }
+
+ tühistamiseNupp.onclick = () => {
+    count = 0
+    numberCount.innerHTML = count
+ }
+
+
+
