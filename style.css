@@ -1,3 +1,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
+
+div {
+    background: #32c5b9;
+ }
+ table {
+    background-color: aliceblue;
+    border-color: rgb(0, 0, 0);
+ }
