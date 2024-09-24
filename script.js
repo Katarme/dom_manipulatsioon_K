@@ -280,36 +280,41 @@ document.body.addEventListener("click", (event) => {
 
 const data = [
 {
-    nimi: "Pirn",
-    hind: 2,
-},
-{
-    nimi: "Õun",
-    hind: 1.5,
-},
-{
     nimi: "Ananass",
-    hind: 2.2,
+    hind: 2,
 },
 {
     nimi: "Banaan",
-    hind: 2,
+    hind: 1.5,
 },
 {
     nimi: "Melon",
+    hind: 2.2,
+},
+{
+    nimi: "Pirn",
     hind: 2,
 },
 {
     nimi: "Virsik",
     hind: 2,
 },
+{
+    nimi: "Õun",
+    hind: 2,
+},
 ];
+console.log(data[2].name);
 
-const tabeligenereerimine = () => {
-    //const tabel = document.createElement("table");
-    const tabeliKeha = document.querySelector("tbody");
+const tabeligenereerimine = (andmed) => {
+    const tabel = document.querySelector("table");
 
-    for (let i = 0; i < data.length; i++) {
+    const keha = document.querySelector("tbody");
+    keha.remove();
+
+    const tabeliKeha = document.createElement("tbody");
+
+    for (let i = 0; i < andmed.length; i++) {
         //create a table row
         const row = document.createElement("tr");
 
@@ -317,21 +322,33 @@ const tabeligenereerimine = () => {
             //create cells
             const cell = document.createElement("td");
             if (j === 0) {
-                cell.append(data[i].nimi);
+                cell.append(andmed[i].nimi);
             } else {
-                cell.append(data[i].hind);
+                cell.append(andmed[i].hind);
             }
             row.append(cell);
         }
 
         tabeliKeha.append(row);
     }
+    tabel.append(tabeliKeha);
 };
 
-tabeligenereerimine();
+tabeligenereerimine(data);
 
-// order an array of names (sort alphabetically)
-// order an array of objects with name
+const sortByName = (data) => {
+  data.sort((a, b) => (a.name < b.name ? -1 : 1));
+  tabeligenereerimine(data);
+};
+
+const nimi = document.getElementById("name");
+
+nimi.onclick = () => {
+  data.sort((a, b) => (a.name < b.name ? -1 : 1));
+  tabeligenereerimine(data);
+};
+
+// order an array of objects with name (sort alphabetically)
 //dataNames.sort(function (a, b)) => (a.name < b.name) {
 //    if (a.name < b.name) {
 //        return -1;
