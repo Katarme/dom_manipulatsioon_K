@@ -1,5 +1,3 @@
-// siit algab lahe javascript
-
 // getting elements
 
 const playground = document.getElementById('playground');
