@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   <div class="lin">
+      <img src="images/birds-8948703_640.jpg" alt="Linnud" />
+      <p>@linnud</p>
+      <p>Pulmatants</p>
+   </div>
+
     <div id="playground">
-        
-    <h1>DOM manipulation done by video</h1>
+      <h1>DOM manipulation done by video</h1>
 
-    <p>Visible secrets</p>
-    <p style="display:none;">Invisible enigmas</p>
-
+      <p>Visible secrets</p>
+      <p style="display: none">Invisible enigmas</p>
     </div>
     <template id="wizard-template">
-        <div class="wizard">
-          <h2 class="wizard-name"></h2>
-          <p class="wizard-speciality"></p>
-        </div>
-      </template>
+      <div class="wizard">
+        <h2 class="wizard-name"></h2>
+        <p class="wizard-speciality"></p>
+      </div>
+    </template>
 
-      <!-- Buttons to set (increase and decrease) and reset number version 1 -->
-      <div>
-      <h1 id="display">0</h1> <!--võib olla ka <p><p> vahel-->
+    <!-- Buttons to set (increase and decrease) and reset number version 1 -->
+    <div>
+      <h1 id="display">0</h1>
+      <!--võib olla ka <p><p> vahel-->
       <button id="increment">+</button>
       <button id="decrement">-</button>
       <button id="reset">RESET</button>
-      </div>
+    </div>
 
-      <!--2 version-->
+    <!--2 version-->
 
     <div>
-<p id="number">0</p>
-<button id="liida" type="button">+</button>
-<button id="lahuta" type="button">-</button>
-<button id="tühista" type="button">Reset</button>
+      <p id="number">0</p>
+      <button id="liida" type="button">+</button>
+      <button id="lahuta" type="button">-</button>
+      <button id="tühista" type="button">Reset</button>
     </div>
 
     <h1>"Div Clicked?" Exercise</h1>
 
-<div >Div 1</div>
+    <div>Div 1</div>
 
-<p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
 
-<div>
-   Div 2
-   <button>A button</button>
-</div>
+    <div>
+      Div 2
+      <button>A button</button>
+    </div>
 
-<p>This is another paragraph.</p>
+    <p>This is another paragraph.</p>
 
-<div>
-   Div 3
-   <h2>A sub-heading</h2>
-   <p>This is yet another paragraph with a <span>span inside it</span>.</p>
-</div>
+    <div>
+      Div 3
+      <h2>A sub-heading</h2>
+      <p>This is yet another paragraph with a <span>span inside it</span>.</p>
+    </div>
 
-<table>
-  <thead>
-    <tr>
-    <th id="name">Nimi</th>
-    <th id="price">Hind</th>
-  </tr>
-  </thead>
-<tbody></tbody>
-</table> 
+    <table>
+      <thead>
+        <tr>
+          <th id="name">Nimi</th>
+          <th id="price">Hind</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
